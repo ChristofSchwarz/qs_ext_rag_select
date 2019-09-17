@@ -1,0 +1,10 @@
+<div qv-extension style="height: 100%; position: relative; overflow: auto;">
+			
+		<span ng-repeat="row in table.rows track by $index">
+		    <div class="myClass1" style="{{row.cells[1].qText}}{{layout.boxCss}}" ng-click="myFunc(row.cells[0].qText)">
+			   {{row.cells[0].qText}} 
+			</div>
+		</span>
+
+	<button ng-if="table.rowCount>table.rows.length" ng-click="table.getMoreData()" class="lui-button more">More...</button>
+</div>
