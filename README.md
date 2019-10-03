@@ -16,7 +16,7 @@ You can add some more css styling in the extension settings, which goes into eve
 The value for "On click, go to Sheet Id" can be 
  * *left empty*: in this case a click will only select and stay on current sheet
  * **next**: on click it selects that value and goes to the next sheet
- * **<any sheetid>**: on click it selects and goes to that particular sheet
+ * **{existing sheetid}**: on click it selects and goes to that particular sheet
 
 ![alttext](https://github.com/ChristofSchwarz/pics/raw/master/rag_card.png "screenshot")
 
