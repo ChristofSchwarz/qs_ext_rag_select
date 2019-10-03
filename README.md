@@ -1,7 +1,7 @@
 # qs_ext_rag_select
 A KPI list of buttons in a customizeable text- and background-color (e.g. for Red/Amber/Green coloring). On click it selects that dimension and jumps to the next or any given sheet.
 
-https://www.youtube.com/watch?v=KN2-C5y3k6A
+<a href="https://www.youtube.com/watch?v=dhQowB_Q9xU"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/200px-YouTube_Logo_2017.svg.png" width="100"/> &nbsp;https://www.youtube.com/watch?v=Z0_NTnZG0q4
 
  * The Dimension is used for the title in the buttons
  * The 1st Measure is used to style the background-color of the buttons (if missing, it assumes #eee)
