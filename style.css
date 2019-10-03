@@ -1,7 +1,7 @@
 .qv-object-Singapore div.qv-object-content-container {
 	overflow: auto;
 }
-.qv-object-Singapore .myClass1 {
+.qv-object-Singapore .myelement {
     font-weight: normal;
     width: 100px;
     float: left;
@@ -17,4 +17,34 @@
 }
 .qv-object-Singapore button {
 	width: 100%;
+}
+
+.qv-object-Singapore .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #333;
+  color: #eee;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 250;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px;  
+}
+.qv-object-Singapore .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.qv-object-Singapore .myelement:hover .tooltiptext {
+  visibility: visible;
 }
