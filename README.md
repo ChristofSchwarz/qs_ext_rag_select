@@ -7,6 +7,10 @@ A KPI list of buttons in a customizeable text- and background-color (e.g. for Re
  * The 1st Measure is used to style the background-color of the buttons (if missing, it assumes #eee)
  * The 2nd Measure is used to style the text color of the buttons (if missing, it assumes #333)
 
+A good example of a 1st Measure formula, which decides Red Amber Green button color on "Sum(Sales)" at the threasholds of >10000 (Green) and >5000 (Amber), would be:
+```
+If(Sum(Sales)>10000,'rgb(70,191,109)',If(Sum(Sales)>5000,'rgb(253,196,4)','rgb(249,109,108)'))
+```
 You can add some more css styling in the extension settings, which goes into every button element.
 
 The sheet setting can be 
