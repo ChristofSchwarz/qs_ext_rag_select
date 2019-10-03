@@ -13,10 +13,10 @@ If(Sum(Sales)>10000,'rgb(70,191,109)',If(Sum(Sales)>5000,'rgb(253,196,4)','rgb(2
 ```
 You can add some more css styling in the extension settings, which goes into every button element.
 
-The sheet setting can be 
- * empty: on click, it just selects but stays on current sheet
- * "next": on click it selects and goes to the next sheet
- * <any sheetid>: on click it selects and goes to that particular sheet
+The value for "On click, go to Sheet Id" can be 
+ * *left empty*: in this case a click will only select and stay on current sheet
+ * **next**: on click it selects that value and goes to the next sheet
+ * **<any sheetid>**: on click it selects and goes to that particular sheet
 
 ![alttext](https://github.com/ChristofSchwarz/pics/raw/master/rag_card.png "screenshot")
 
