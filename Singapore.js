@@ -1,14 +1,15 @@
-define( ["qlik","jquery", "text!./style.css", "text!./template.html"], function (qlik, $, cssContent, template ) {'use strict';
-    $("<style>").html(cssContent).appendTo("head");
-	return {
-       template: template,
-       initialProperties : {
+define( ["qlik","jquery", "text!./style.css", "text!./template.html"], function (qlik, $, cssContent, template ) {
+  'use strict';
+  $("<style>").html(cssContent).appendTo("head");
+  return {
+		template: template,
+		initialProperties : {
 			qHyperCubeDef : {
 				qDimensions : [],
 				qMeasures : [],
 				qInitialDataFetch : [{
-					qWidth : 2,
-					qHeight : 500
+					qWidth : 3,
+					qHeight : 3333
 				}]
 			}
 		},
@@ -23,8 +24,8 @@ define( ["qlik","jquery", "text!./style.css", "text!./template.html"], function 
 				},
 				measures : {
 					uses : "measures",
-					min : 1,
-					max : 1
+					min : 0,
+					max : 2
 				},
 				sorting : {
 					uses : "sorting"
@@ -37,22 +38,30 @@ define( ["qlik","jquery", "text!./style.css", "text!./template.html"], function 
 							type: 'items',
 							items: [
 								{
-									ref : "qHyperCubeDef.qInitialDataFetch.0.qHeight",
-									label : "Initial fetch rows",
-									type : "number",
-									defaultValue : 500
-								},
-								{
+									label: "The dimension defines the labels of the buttons ...",
+									component: "text"
+								},{
+									label: "The 1st measure is a text defines the background-color e.g. =If(Sum(Sales)>10000, 'rgb(70,191,109)', If(Sum(Sales)>5000, 'rgb(253,196,4)', 'rgb(249,109,108)'))",
+									component: "text"
+								},{
+									label: "The 2nd measure is a text that defines the text-color e.g. ='#eee' ...",
+									component: "text"
+								},{
 									ref : "boxCss",
-									label : "CSS style for item",
+									label : "Add more css styling for each element here",
 									type : "string",
 									defaultValue : "width:19%;"						
-								},
-								{
+								},{
 									ref : "gotoSheet",
-									label : "Go to Sheet id",
+									label : "On click, go to Sheet id (leave empty for no sheet navigation)",
 									type : "string",
 									defaultValue: "next"
+								},{
+									label: "Open on Github",
+									component: "button", 
+									action: function(arg) {
+										window.open('https://github.com/ChristofSchwarz/qs_ext_rag_select','_blank');
+									}
 								}
 							]
 						}
